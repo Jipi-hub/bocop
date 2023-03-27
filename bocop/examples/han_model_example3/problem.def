@@ -1,0 +1,61 @@
+# Definition file
+
+# Dimensions
+dim.state 3
+dim.control 2
+dim.boundaryconditions 3
+dim.pathconstraints 1
+dim.parameters 0
+dim.constants 7
+
+# Time interval
+initial.time 0
+final.time 30000
+
+
+# Constants
+constant.0 0.0000087
+constant.1 0.047
+constant.2 0.2
+constant.3 0.25
+constant.4 0.000299
+constant.5 0.0068
+constant.6 0.000008
+
+# Time discretisation
+ode.discretization midpoint_implicit
+time.steps 300000
+
+
+# Bounds for constraints
+boundarycond.0.lowerbound 10
+boundarycond.0.upperbound 10
+boundarycond.1.lowerbound 0.15
+boundarycond.1.upperbound 0.15
+boundarycond.2.lowerbound 0
+boundarycond.2.upperbound 0
+
+
+# Bounds for variables
+control.0.lowerbound 0
+control.0.upperbound 0.0004
+control.1.lowerbound 0
+control.1.upperbound 1000
+
+# Initialization for discretized problem
+state.0.init 10
+state.1.init 0.5
+state.2.init 0
+control.0.init 0
+control.1.init 1000
+
+# Names
+
+# Ipopt
+ipoptIntOption.print_level 5
+ipoptIntOption.max_iter 15000
+ipoptStrOption.mu_strategy adaptive
+ipoptNumOption.tol 1e-25
+
+# Misc
+ad.retape 0
